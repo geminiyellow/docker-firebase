@@ -1,0 +1,12 @@
+version: '3'
+services:
+  serve:
+    build: .
+    image: docker-firebase
+    container_name: docker-firebase
+    tty: true
+    volumes:
+      - $PWD:/app
+    ports:
+      - 5000:5000
+      - 9005:9005
